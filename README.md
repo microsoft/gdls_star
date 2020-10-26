@@ -16,6 +16,9 @@ month = {June},
 year = {2020}
 }
 ```
+
+[PDF](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fragoso_gDLS_Generalized_Pose-and-Scale_Estimation_Given_Scale_and_Gravity_Priors_CVPR_2020_paper.pdf)
+
 ## Compilation
 
 ### Pre-requisites
