@@ -112,9 +112,10 @@ class EstimateSimilarityTransformationTest : public ::testing::Test {
                                             const double max_angle_deg) {
     CHECK_LT(min_angle_deg, max_angle_deg);
     std::uniform_real_distribution<double> angle_dist(min_angle_deg,
-                                                      max_angle_deg);    
+                                                      max_angle_deg);
+    std::mt19937& prng = *rng;    
     const Eigen::Quaterniond rotation(
-        Eigen::AngleAxisd(DegToRad(35.0),
+        Eigen::AngleAxisd(DegToRad(angle_dist(prng)),
                           Eigen::Vector3d::Random().normalized()));
     return rotation;
   }
